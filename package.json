@@ -1,0 +1,24 @@
+{
+    "name": "generator-alexa-nodejs",
+    "version": "0.1.0",
+    "description": "This cli will help in generating files and directory for alexa skill in nodejs",
+    "files": [
+        "generators"
+    ],
+    "keywords": [
+        "yeoman-generator"
+    ],
+    "bin": {
+        "nodlex": "./cli.js"
+    },
+    "dependencies": {
+        "chalk": "^2.3.0",
+        "commander": "^2.13.0",
+        "esprima": "^4.0.0",
+        "is-invalid-path": "^0.1.0",
+        "jsonfile": "^4.0.0",
+        "path": "^0.12.7",
+        "yeoman-environment": "^2.0.5",
+        "yeoman-generator": "^2.0.2"
+    }
+}
