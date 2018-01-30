@@ -1,6 +1,6 @@
 # Nodlex
 
-Nodlex is a CLI tool that can generate boilerplate code for Alexa Skill Developement. Nodlex generate code on the boilerplate based on the repository [alexa-nodejs-boilerplate](https://github.com/as-ajitsingh/alexa-nodejs-boilerplate.git). Nodlex also provides functionality to **Add Intent** from CLI itself. So no overhead of writing basic code everytime you add a new intent to your skill. 
+Nodlex is a CLI tool that can generate boilerplate code for Alexa Skill Developement. Nodlex generate code on the boilerplate based on the repository [alexa-nodejs-boilerplate](https://github.com/as-ajitsingh/alexa-nodejs-boilerplate.git), for more details on how to use this boiler plate follow the [link](https://github.com/as-ajitsingh/alexa-nodejs-boilerplate/blob/master/README.md). Nodlex also provides functionality to **Add Intent** from CLI itself. So no overhead of writing basic code everytime you add a new intent to your skill. 
 
 ## Installation
   
