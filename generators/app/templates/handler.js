@@ -16,7 +16,7 @@ var responseBuilder = (dataStore) => {
     };
     return response;
 }
-module.exports = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
     console.log(`Event: [${JSON.stringify(event)}]`);
     var dataStore = new DataStore();
     dataStore.userData = event.session.user;

@@ -145,3 +145,4 @@ ResponseBuilder.prototype.addPrompt = function(promptBody) {
             return this;
     }
 };
+module.exports = ResponseBuilder;
