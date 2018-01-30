@@ -1,25 +1,36 @@
 {
-    "name": "nodlex",
-    "version": "0.1.0",
-    "description": "A cli tool for generating boilerplate code for Alexa in nodejs.",
-    "files": [
-        "generators"
-    ],
-    "keywords": [
-        "yeoman-generator"
-    ],
-    "bin": {
-        "nodlex": "./cli.js"
-    },
-    "dependencies": {
-        "chalk": "^2.3.0",
-        "commander": "^2.13.0",
-        "escodegen": "^1.9.0",
-        "esprima": "^4.0.0",
-        "is-invalid-path": "^0.1.0",
-        "jsonfile": "^4.0.0",
-        "path": "^0.12.7",
-        "yeoman-environment": "^2.0.5",
-        "yeoman-generator": "^2.0.2"
-    }
+  "name": "nodlex",
+  "version": "0.1.0",
+  "description": "A cli tool for generating boilerplate code for Alexa in nodejs.",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "bin": {
+    "nodlex": "./cli.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.13.0",
+    "escodegen": "^1.9.0",
+    "esprima": "^4.0.0",
+    "is-invalid-path": "^0.1.0",
+    "jsonfile": "^4.0.0",
+    "path": "^0.12.7",
+    "yeoman-environment": "^2.0.5",
+    "yeoman-generator": "^2.0.2"
+  },
+  "main": "cli.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "NA"
+  },
+  "author": "Ajit Singh (as.ajitsingh@outlook.com)",
+  "license": "Apache-2.0"
 }
