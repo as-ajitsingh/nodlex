@@ -1,6 +1,6 @@
 {
   "name": "nodlex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A cli tool for generating boilerplate code for Alexa in nodejs.",
   "files": [
     "generators"
