@@ -6,7 +6,7 @@ Nodlex is a CLI tool that can generate boilerplate code for Alexa Skill Develope
   
  To use Nodlex you must have [**nodejs**](https://nodejs.org/) and [**npm**](https://nodejs.org/) preinstalled in your system. To install Nodlex globally use 
 
-    npm install -g nodlex
+	`npm install -g nodlex`
 
 This will install Nodlex globally so that it can be used from anywhere in the system.
 
@@ -14,11 +14,11 @@ This will install Nodlex globally so that it can be used from anywhere in the sy
 
  - To create a new nodlex project, type in console  
 
-    nodlex create \<your alexa project name\>
+    `nodlex create \<your alexa project name\>`
 
  - To add a new intent into already existing nodlex project
 
-    nodlex addintent \<your intent name\>
+    `nodlex addintent \<your intent name\>`
 
 ## License
 
