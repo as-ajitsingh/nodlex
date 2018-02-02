@@ -9,11 +9,17 @@ var packageProperties = require('./package.json');
 const APPLICATION_ID = process.env.APPLICATION_ID || Storage[packageProperties['name']].applicationId;
 
 var responseBuilder = (dataStore) => {
+    for (var propName in dataStore.response) {
+        if (dataStore.response[propName] === null || dataStore.response[propName] === undefined || (Object.keys(dataStore.response[propName]).length === 0 && dataStore.response[propName].constructor === Object)) {
+            delete dataStore.response[propName];
+        }
+    }
     var response = {
         version: "1.0",
         sessionAttributes: JSON.parse(JSON.stringify(dataStore.attributes)),
         response: JSON.parse(JSON.stringify(dataStore.response))
     };
+    console.log(`Response: [${JSON.stringify(response)}]`);
     return response;
 }
 module.exports.handler = (event, context, callback) => {
