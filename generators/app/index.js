@@ -78,7 +78,7 @@ module.exports = class extends Generator {
                 this.projectPath = this.destinationRoot();
                 if (!this.fs.readJSON(path.join(this.projectPath, nodlexFile)))
                     throw new Error("Your current directory is not a Nodlex project directory, please run this command from Nodlex project directory.");
-                if ((isInvalid(this.options.actionDescription) || this.options.actionDescription.match(/^[A-z]+$/).len === 0) && (this.options.actionDescription))
+                if ((isInvalid(this.options.actionDescription) || !this.options.actionDescription.match(/^[A-z]+\.?[A-z]+$/) || this.options.actionDescription.match(/^[A-z]+\.?[A-z]+$/).len === 0) && (this.options.actionDescription))
                     throw new Error('This intent name is not valid')
 
                 this.prompt([{
@@ -87,7 +87,7 @@ module.exports = class extends Generator {
                     message: 'Name of the intent, you want to add',
                     default: this.options.actionDescription,
                     validate: (intentName) => {
-                        if (isInvalid(intentName) || intentName.match(/^[A-z]+$/).len === 0) return 'This intent name is not valid';
+                        if (isInvalid(intentName) || !intentName.match(/^[A-z]+\.?[A-z]+$/) || intentName.match(/^[A-z]+\.?[A-z]+$/).len === 0) return 'This intent name is not valid';
                         else return true;
                     }
                 }]).then(answers => {
@@ -105,7 +105,7 @@ module.exports = class extends Generator {
                                 type: "CallExpression",
                                 callee: {
                                     type: "Identifier",
-                                    name: customIntentName
+                                    name: customIntentName.replace('.', '')
                                 },
                                 arguments: [{
                                     type: "Identifier",
@@ -114,14 +114,13 @@ module.exports = class extends Generator {
                             }
                         }]
                     };
-
                     var methodObject = {
                         type: "VariableDeclaration",
                         declarations: [{
                             type: "VariableDeclarator",
                             id: {
                                 type: "Identifier",
-                                name: customIntentName
+                                name: customIntentName.replace('.', '')
                             },
                             init: {
                                 type: "FunctionExpression",
