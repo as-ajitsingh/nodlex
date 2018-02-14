@@ -1,7 +1,7 @@
 module.exports = function() {
     return {
         userData: {},
-        attributes: {},
+        sessionData: {},
         intent: '',
         slots: [],
         response: {}
